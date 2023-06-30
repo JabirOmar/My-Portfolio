@@ -1,0 +1,208 @@
+/*  */
+/* Landing Page */
+/*  */
+
+.ball {
+  animation: landing-animation 1.5s forwards 1;
+  top: 0;
+  transform: scale(0);
+}
+
+.explore-text {
+  animation: text-animation 1.5s forwards 0.6s;
+  font-size: 0;
+}
+
+.zoom-in {
+  animation: zoom_in 1.5s forwards;
+}
+
+@keyframes landing-animation {
+  0% {
+    top: 0;
+    transform: scale(0);
+    /* font-size: 0; */
+  }
+  100% {
+    top: 50%;
+    /* font-size: 20px; */
+    transform: scale(1) translateY(-50%);
+  }
+}
+
+@keyframes text-animation {
+  0% {
+    font-size: 0;
+  }
+  100% {
+    font-size: 20px;
+  }
+}
+
+@keyframes zoom_in {
+  from {
+    top: 50%;
+    transform: scale(1) translateY(-50%);
+    opacity: 1;
+  }
+  to {
+    top: 130%;
+    transform: scale(18) translateY(-50%);
+    opacity: 0;
+  }
+}
+
+/*  */
+/* Top Bar */
+/*  */
+.nav_logo,
+.nav_menu {
+  animation: nav_logo_entery 0.5s forwards 0.5s;
+  opacity: 0;
+}
+
+@keyframes nav_logo_entery {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*  */
+/* Hero Section */
+/*  */
+.hello_text {
+  animation: hello_ani 0.5s forwards 1s;
+  opacity: 0;
+}
+
+.my_name {
+  animation: name_ani 0.8s forwards 2s;
+  letter-spacing: -10px;
+  opacity: 0;
+}
+
+.little_intro {
+  animation: little_intro_ani 0.8s forwards 3s;
+  opacity: 0;
+}
+
+.contact_button {
+  animation: delay_button 0.8s forwards 4s;
+  opacity: 0;
+}
+
+.labtop {
+  animation: hero_img 3s forwards 1s;
+  opacity: 0;
+}
+
+.indicator {
+  animation: idicate 3s linear infinite;
+  bottom: 2px;
+}
+
+@keyframes hello_ani {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes name_ani {
+  0% {
+    letter-spacing: -10px;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes little_intro_ani {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes delay_button {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+    transform: rotate(2deg);
+  }
+  20%,
+  40%,
+  60% {
+    transform: rotate(-4deg);
+  }
+  30%,
+  50%,
+  70% {
+    transform: rotate(4deg);
+  }
+  80% {
+    transform: rotate(-2deg);
+  }
+  90% {
+    transform: rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hero_img {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes idicate {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/*  */
+/* Service Section */
+/*  */
+.title::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 140%;
+  height: 2px;
+  border-radius: 1px;
+  background-color: #ffd700;
+}
